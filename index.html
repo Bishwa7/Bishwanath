@@ -1,12 +1,155 @@
 <!DOCTYPE html>
-<html>
-    <head><title>My site</title></head>
-    <body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bishwanath Paul - Resume</title>
+<script>
+  if (localStorage.getItem("theme") !== "light") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<button id="themeToggle" class="toggle-btn" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<div class="container">
+    <header>
         <h1>Bishwanath Paul</h1>
-        <h1>Bishwanath Paul</h1>
-        <h1>Will update it whenever I get the time</h1>
-        <h1>Maybe I will update it twice per week</h1>
+        <div class="contact">
+            <span>📍 Silchar, Assam (Open to move)</span> |
+            <span>✉ <a href="mailto:bishwa244@gmail.com" target="_blank">bishwa244@gmail.com</a></span> |
+            <span>📞 <a href="tel:+918638643990" target="_blank">0863 864 39 90</a></span> |
+            <span>🌐 <a href="https://bishwa7.github.io/Bishwanath/" target="_blank">MyWebsite</a></span> |
+            <span>🔗 <a href="https://www.linkedin.com/in/bishwanathpaul/" target="_blank">LinkedIn</a></span> |
+            <span>💻 <a href="https://github.com/Bishwa7" target="_blank">GitHub</a></span>
+        </div>
+    </header>
+
+    
+    <section>
+        <h2>Technologies</h2><hr>
+        <p><b>Frontend:</b>  HTML, CSS, React.js, Tailwind CSS, Figma.</p>
+        <p><b>Backend:</b>  Node.js, Express.js, JavaScript, TypeScript.</p>
+        <p><b>Database:</b>  MongoDB, MySQL.</p>
+        <p><b>Languages, Tools and others:</b>  C++, Data Structure, Git, GitHub, VS Code, Postman, Linux.</p>
+    </section>
+
+    
+    <section>
+        <h2>Experience</h2><hr>
+        <div class="row">
+            <div><h3>Associate Engineer, Quess Corp (Accolite) — Vodafone RECC</h3></div>
+            <div class="date">May 2024 – Sep 2024</div>
+        </div>
+        <ul>
+            <li>Automated routine operational tasks and system health checks using Bash scripts in a Linux environment to reduce manual effort and improve reliability.</li>
+            <li>Performed backend data reconciliation, validating mismatches and ensuring data accuracy across multiple systems (5000+ data corrected/month).</li>
+            <li>Conducted log analysis and backend investigations to troubleshoot and resolve customer issues raised through client tickets.</li>
+            <li> Generated and validated periodic operational reports, and shared them with management and client stakeholders as part of scheduled reporting.</li>
+        </ul>
+    </section>
+
+    
+    <section>
+        <h2>Projects</h2><hr>
+
+        <div class="row">
+            <div><h3>MovieHunt - Movie Ticket Booking App</h3> <a href="https://github.com/Bishwa7/MovieHunt" target="_blank"><mark>[GitHub]</mark></a></div>
+            <div class="date">November 2025 – Current</div>
+        </div>
+        <ul>
+            <li>Line One</li>
+            <li>Line Two</li>
+            <li>Line Three</li>
+            <li>Line Four</li>
+        </ul>
 
 
-    </body>
+
+
+        <div class="row" style="margin-top:14px;">
+            <div><h3>BrainWave - Second Brain App</h3> <a href="https://github.com/Bishwa7/BrainWave" target="_blank"><mark>[GitHub]</mark></a></div>
+            <div class="date">November 2025</div>
+        </div>
+        <ul>
+            <li>Built secure JWT-based authentication and cloud-storage backend with Node.js + Express + MongoDB.</li>
+            <li>Developed a dashboard UI in React (State management) and TailwindCSS to visualize and revisit saved content.</li>
+            <li>Implemented a smart tagging system to categorize content and embed external content (e.g., YouTube links, twitter posts).</li>
+            <li>Tools Used: <mark>TypeScript, React, Redux Toolkit, Tailwind CSS, Node.js, Express.js, MongoDB, JWT</mark></li>
+        </ul>
+
+
+
+
+
+        <div class="row" style="margin-top:14px;">
+            <div><h3>Course-Selling App</h3> <a href="https://github.com/Bishwa7/Course-Selling-app" target="_blank"><mark>[GitHub]</mark></a></div>
+            <div class="date">September 2025</div>
+        </div>
+        <ul>
+            <li>Built a RESTful API for course management (CRUD) using Express.js and MongoDB.</li>
+            <li> Implemented JWT-based authentication for both admin and users to secure the backend.</li>
+            <li>Modeled database schema for courses, users, and purchases to ensure data integrity and scalability.</li>
+            <li>Tools Used: <mark>JavaScript, Node.js, Express.js, Postman, MongoDB, Jsonwebtoken</mark></li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+    
+    <section>
+        <h2>Education</h2><hr>
+        <div class="row">
+            <div><h3>Lovely Professional University – B.Tech in Computer Science and Engineering</h3></div>
+            <div class="date">Aug 2020 – Jun 2023</div>
+        </div>
+        <ul>
+            <li>CGPA: 7.35</li>
+            <li>Coursework: Data Structures, OOPs, DBMS, Computer Networks.</li>
+        </ul>
+
+        <div class="row">
+            <div><h3>Lovely Professional University – Diploma in Computer Science and Engineering</h3></div>
+            <div class="date">Aug 2017 – Aug 2020</div>
+        </div>
+        <ul>
+            <li>CGPA: 7.81</li>
+        </ul>
+    </section>
+</div>
+
+<script>
+const btn = document.getElementById("themeToggle");
+
+function toggleDark() {
+  document.documentElement.classList.toggle("dark");
+
+  if (document.documentElement.classList.contains("dark")) {
+    btn.textContent = "💡 Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    btn.textContent = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// Set correct button text on load
+if (localStorage.getItem("theme") !== "light") {
+  btn.textContent = "💡 Light Mode";
+} else {
+  btn.textContent = "🌙 Dark Mode";
+}
+</script>
+
+</body>
 </html>
