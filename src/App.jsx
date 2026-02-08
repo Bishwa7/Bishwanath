@@ -1,5 +1,6 @@
 import './App.css'
 import Background from './components/Background'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -7,10 +8,9 @@ function App() {
     <>
       <Background />
 
-      <div className="relative z-10 text-white text-center pt-[20vh]">
+      <div className="relative z-10 text-white">
         {/* Your foreground content goes here */}
-        <h1>Welcome to My Website</h1>
-        <p>This is content over the background.</p>
+        <Navbar />
       </div>
 
       {/* <div className="relative z-10 min-h-screen text-white">
